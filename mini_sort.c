@@ -21,3 +21,12 @@ void swap(double *pa, double *pb) {
   *pa = *pb;
   *pb = temp;
 }
+
+void line_up(double *maxp, double *midp, double *minp) {
+  if (*maxp < *midp)
+    swap(midp, maxp);
+  if (*maxp < *minp)
+    swap(minp, maxp);
+  if (*minp > *midp)
+    swap(midp, minp);
+}
